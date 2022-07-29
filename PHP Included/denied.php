@@ -20,7 +20,7 @@ if(isset($_POST['btn-login']))
 	}
 	else
 	{
-		$error = "<b><font color='red'>Wrong Details !</font></b>";
+		$error = "Wrong Details !";
 	}
 }
 ?>
@@ -28,51 +28,29 @@ if(isset($_POST['btn-login']))
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Sign In</title>
+<title>Access Denied</title>
 <link rel="stylesheet" href="style.css" type="text/css"  />
 </head>
 <body>
 
-<div id="main">
+
+
+	<div id="main">
+
+								<h1><font color='red'>Access Denied !</font></h1>
+
+               <p><b>Sorry! You can't access this page.</b></p>
+
+
+								<p><a href="index.php" ><button class="button" >SIGN IN</button</a>
+</p>
+        </div>
 
 
 
 
-       <form  method="post" >
-
-        <h1 >Sign In</h1>
-
-        <?php
-			if(isset($error))
-			{
-				?>
-
-                   <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
-
-                <?php
-			}
-		?>
 
 
-
-        <input type="text"  name="txt_uname_email" placeholder="Username or email" required />
-
-
-
-        <input type="password"  name="txt_password" placeholder="Your Password" />
-
-
-
-            <input value="SIGN IN" type="submit" name="btn-login" class="button">
-
-
-
-            <p>Don't have account! <a href="sign-up.php">Sign Up</a></p>
-      </form>
-
-
-
-</div>
 
 </body>
 </html>
